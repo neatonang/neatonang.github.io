@@ -3,79 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>Neaton Ang | Researcher</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
     <style>
-    :root {
-        --bg-color: #0f172a;
-        --card-bg: rgba(30, 41, 59, 0.7);
-        --text-main: #f8fafc;
-        --text-dim: #94a3b8;
-        --accent: #38bdf8;
-        --gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
-    }
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --accent: #38bdf8;
+            --gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+        }
 
-    body { 
-        font-family: 'Inter', -apple-system, sans-serif; 
-        line-height: 1.7; 
-        color: var(--text-main); 
-        max-width: 850px; 
-        margin: 0 auto; 
-        padding: 4rem 2rem; 
-        background-color: var(--bg-color);
-        background-image: radial-gradient(circle at top right, #1e293b, #0f172a);
-    }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.7; 
+            color: var(--text-main); 
+            max-width: 850px; 
+            margin: 0 auto; 
+            padding: 4rem 2rem; 
+            background-color: var(--bg-color);
+            background-image: radial-gradient(circle at top right, #1e293b, #0f172a);
+            background-attachment: fixed;
+        }
 
-    /* Profile Section */
-    .profile { text-align: center; margin-bottom: 5rem; }
-    .profile img { 
-        width: 140px; height: 140px; 
-        border-radius: 50%; 
-        object-fit: cover; 
-        border: 4px solid var(--accent);
-        box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
-        transition: transform 0.3s ease;
-    }
-    .profile img:hover { transform: scale(1.05); }
-    h1 { font-size: 2.5rem; margin-top: 1rem; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .subtitle { color: var(--text-dim); font-size: 1.1rem; }
+        /* Profile Section */
+        .profile { text-align: center; margin-bottom: 4rem; }
+        .profile img { 
+            width: 150px; height: 150px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            border: 4px solid var(--accent);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.2);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .profile img:hover { transform: scale(1.1); }
+        
+        h1 { 
+            font-size: 3rem; 
+            font-weight: 800;
+            margin-top: 1.5rem; 
+            margin-bottom: 0.5rem;
+            background: var(--gradient); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+        
+        .subtitle { color: var(--text-dim); font-size: 1.2rem; font-weight: 400; }
 
-    /* Modern Timeline */
-    .timeline { position: relative; padding-left: 30px; }
-    .timeline::before {
-        content: ""; position: absolute; left: 0; top: 0; bottom: 0;
-        width: 2px; background: rgba(255,255,255,0.1);
-    }
-    .timeline-item { position: relative; margin-bottom: 3rem; }
-    .timeline-item::before {
-        content: ""; position: absolute; left: -35px; top: 8px;
-        width: 10px; height: 10px; border-radius: 50%;
-        background: var(--accent); box-shadow: 0 0 10px var(--accent);
-    }
-    .date { font-size: 0.9rem; font-weight: bold; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
+        .social-links { margin-top: 1.5rem; }
+        .social-links a {
+            color: var(--text-main);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .social-links a:hover { color: var(--accent); }
 
-    /* Project Cards */
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 2rem; }
-    .card { 
-        background: var(--card-bg); 
-        padding: 2rem; 
-        border-radius: 16px; 
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        text-decoration: none; 
-        color: inherit; 
-        transition: all 0.3s ease;
-        backdrop-filter: blur(10px);
-    }
-    .card:hover { 
-        transform: translateY(-5px); 
-        border-color: var(--accent);
-        background: rgba(30, 41, 59, 0.9);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    }
-    .card h3 { margin: 0 0 10px 0; color: var(--accent); }
-    .card p { font-size: 0.95rem; color: var(--text-dim); margin-bottom: 0; }
+        /* CV Button */
+        .btn {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 2rem;
+            background: var(--gradient);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3); }
 
-    hr { border: 0; height: 1px; background: rgba(255,255,255,0.1); margin: 4rem 0; }
-    h2 { font-size: 1.8rem; margin-bottom: 1.5rem; }
+        /* Modern Timeline */
+        h2 { font-size: 1.8rem; margin-bottom: 2rem; position: relative; }
+        h2::after { content: ""; position: absolute; left: 0; bottom: -5px; width: 40px; height: 3px; background: var(--accent); }
+
+        .timeline { position: relative; padding-left: 35px; margin: 2rem 0; }
+        .timeline::before {
+            content: ""; position: absolute; left: 0; top: 0; bottom: 0;
+            width: 2px; background: rgba(255,255,255,0.1);
+        }
+        .timeline-item { position: relative; margin-bottom: 3.5rem; }
+        .timeline-item::before {
+            content: ""; position: absolute; left: -41px; top: 8px;
+            width: 12px; height: 12px; border-radius: 50%;
+            background: var(--accent); box-shadow: 0 0 10px var(--accent);
+            border: 3px solid var(--bg-color);
+        }
+        .date { font-size: 0.85rem; font-weight: 800; color: var(--accent); text-transform: uppercase; letter-spacing: 1.5px; }
+        .timeline-content strong { color: #fff; font-size: 1.1rem; }
+        .timeline-content p { color: var(--text-dim); margin-top: 5px; }
+
+        /* Project Cards */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 2rem; }
+        .card { 
+            background: var(--card-bg); 
+            padding: 2.5rem; 
+            border-radius: 20px; 
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            text-decoration: none; 
+            color: inherit; 
+            transition: all 0.4s ease;
+            backdrop-filter: blur(12px);
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover { 
+            transform: translateY(-8px); 
+            border-color: rgba(56, 189, 248, 0.4);
+            background: rgba(30, 41, 59, 0.9);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        .card h3 { margin: 0 0 12px 0; color: var(--accent); font-size: 1.3rem; }
+        .card p { font-size: 0.95rem; color: var(--text-dim); line-height: 1.6; }
+        .card-tag { 
+            font-size: 0.7rem; 
+            text-transform: uppercase; 
+            color: var(--accent); 
+            font-weight: bold; 
+            letter-spacing: 1px; 
+            margin-bottom: 8px;
+        }
+
+        hr { border: 0; height: 1px; background: rgba(255,255,255,0.05); margin: 5rem 0; }
+
+        @media (max-width: 600px) {
+            body { padding: 2rem 1rem; }
+            h1 { font-size: 2.2rem; }
+        }
     </style>
 </head>
 <body>
@@ -83,7 +141,15 @@
     <section class="profile">
         <img src="profile.jpg" alt="Neaton Ang">
         <h1>Neaton Ang</h1>
-        <p>Researcher | Natural Language Processing</p>
+        <p class="subtitle">Researcher | Natural Language Processing</p>
+        
+        <div class="social-links">
+            <a href="https://github.com/neatonang" target="_blank">GitHub</a>
+            <a href="#" target="_blank">LinkedIn</a>
+            <a href="mailto:your@email.com">Email</a>
+        </div>
+
+        <a href="reports/cv.pdf" class="btn">Download CV</a>
     </section>
 
     <hr>
@@ -92,16 +158,25 @@
         <h2>Timeline & Bio</h2>
         <div class="timeline">
             <div class="timeline-item">
-                <div class="date">2024 - Present</div>
-                <p><strong>Senior Role at Tech Co.</strong><br>Lead developer working on innovative web solutions.</p>
+                <div class="date">2024 — Present</div>
+                <div class="timeline-content">
+                    <strong>Lead NLP Researcher</strong>
+                    <p>Focusing on large language model optimization and semantic analysis at [Company Name].</p>
+                </div>
             </div>
             <div class="timeline-item">
-                <div class="date">2022 - 2024</div>
-                <p><strong>Graduate Studies</strong><br>Focused on Data Science and Technical Writing.</p>
+                <div class="date">2022 — 2024</div>
+                <div class="timeline-content">
+                    <strong>Graduate Research Assistant</strong>
+                    <p>Published papers on sentiment analysis and automated text summarization techniques.</p>
+                </div>
             </div>
             <div class="timeline-item">
-                <div class="date">2020</div>
-                <p><strong>The Beginning</strong><br>Started my journey into the world of tech and building things.</p>
+                <div class="date">2020 — 2022</div>
+                <div class="timeline-content">
+                    <strong>Junior Data Analyst</strong>
+                    <p>Started the journey by exploring data patterns and building foundational machine learning models.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -111,20 +186,29 @@
     <section>
         <h2>Projects & Reports</h2>
         <div class="grid">
-            <a href="https://github.com/yourlink" class="card">
-                <h3>Project Alpha</h3>
-                <p>A web application built with Python and React. Click to view the repo.</p>
+            <a href="https://github.com/neatonang/project1" class="card">
+                <span class="card-tag">GitHub Repo</span>
+                <h3>NLP Toolkit v1.0</h3>
+                <p>A custom library for preprocessing technical research papers using Python and Spacy.</p>
             </a>
-            <a href="reports/my-report.pdf" class="card">
-                <h3>Annual Research Report</h3>
-                <p>A deep dive into industry trends. (PDF format)</p>
+            
+            <a href="reports/research-paper.pdf" class="card">
+                <span class="card-tag">PDF Report</span>
+                <h3>Transformer Architecture Study</h3>
+                <p>A comprehensive 40-page report analyzing the efficiency of attention mechanisms in small-scale models.</p>
             </a>
+
             <a href="#" class="card">
-                <h3>Project Beta</h3>
-                <p>Automated workflow tool for Git management.</p>
+                <span class="card-tag">Case Study</span>
+                <h3>Semantic Search Engine</h3>
+                <p>Building a vector-based search engine for academic archives using Pinecone and OpenAI.</p>
             </a>
         </div>
     </section>
+
+    <footer style="text-align: center; margin-top: 8rem; color: var(--text-dim); font-size: 0.8rem;">
+        <p>&copy; 2026 Neaton Ang. Built with Git.</p>
+    </footer>
 
 </body>
 </html>
