@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #333;
+            --accent: #0070f3;
+            --gray: #f4f4f4;
+        }
+        body { font-family: -apple-system, system-ui, sans-serif; line-height: 1.6; color: var(--text); max-width: 800px; margin: 0 auto; padding: 2rem; background: var(--bg); }
+        
+        /* Profile Section */
+        .profile { text-align: center; margin-bottom: 3rem; }
+        .profile img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent); }
+        
+        /* Timeline Section */
+        .timeline { border-left: 2px solid var(--accent); padding-left: 20px; margin-left: 20px; }
+        .timeline-item { position: relative; margin-bottom: 2rem; }
+        .timeline-item::before { content: ""; position: absolute; left: -31px; top: 5px; width: 20px; height: 20px; background: var(--accent); border-radius: 50%; }
+        .date { font-weight: bold; color: var(--accent); }
+
+        /* Projects Section */
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .card { padding: 1.5rem; border: 1px solid #ddd; border-radius: 8px; transition: 0.3s; text-decoration: none; color: inherit; }
+        .card:hover { border-color: var(--accent); background: #fafafa; }
+        .card h3 { margin-top: 0; color: var(--accent); }
+        
+        @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <section class="profile">
+        <img src="profile.jpg" alt="Your Name">
+        <h1>Your Name</h1>
+        <p>Software Developer | Researcher | Writer</p>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Timeline & Bio</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="date">2024 - Present</div>
+                <p><strong>Senior Role at Tech Co.</strong><br>Lead developer working on innovative web solutions.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="date">2022 - 2024</div>
+                <p><strong>Graduate Studies</strong><br>Focused on Data Science and Technical Writing.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="date">2020</div>
+                <p><strong>The Beginning</strong><br>Started my journey into the world of tech and building things.</p>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Projects & Reports</h2>
+        <div class="grid">
+            <a href="https://github.com/yourlink" class="card">
+                <h3>Project Alpha</h3>
+                <p>A web application built with Python and React. Click to view the repo.</p>
+            </a>
+            <a href="reports/my-report.pdf" class="card">
+                <h3>Annual Research Report</h3>
+                <p>A deep dive into industry trends. (PDF format)</p>
+            </a>
+            <a href="#" class="card">
+                <h3>Project Beta</h3>
+                <p>Automated workflow tool for Git management.</p>
+            </a>
+        </div>
+    </section>
+
+</body>
+</html>
