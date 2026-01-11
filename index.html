@@ -53,7 +53,28 @@
         
         .subtitle { color: var(--text-dim); font-size: 1.2rem; font-weight: 400; }
 
-        .social-links { margin-top: 1.5rem; }
+        /* NEW: Location + Contact */
+        .meta {
+            margin-top: 0.65rem;
+            color: var(--text-dim);
+            font-size: 0.98rem;
+        }
+        .meta a {
+            color: var(--text-dim);
+            text-decoration: none;
+            border-bottom: 1px dotted rgba(148, 163, 184, 0.55);
+            transition: color 0.3s, border-color 0.3s;
+        }
+        .meta a:hover {
+            color: var(--accent);
+            border-color: rgba(56, 189, 248, 0.7);
+        }
+        .meta .sep {
+            margin: 0 10px;
+            opacity: 0.7;
+        }
+
+        .social-links { margin-top: 1.2rem; }
         .social-links a {
             color: var(--text-main);
             font-size: 1.5rem;
@@ -133,6 +154,8 @@
         @media (max-width: 600px) {
             body { padding: 2rem 1rem; }
             h1 { font-size: 2.2rem; }
+            .meta { font-size: 0.92rem; }
+            .meta .sep { margin: 0 7px; }
         }
     </style>
 </head>
@@ -142,10 +165,17 @@
         <img src="profile.jpg" alt="Neaton Ang">
         <h1>Neaton Ang</h1>
         <p class="subtitle">LLM researcher and Columbia MS student focused on data, evaluation, and scalable training</p>
+
+        <!-- NEW: Location + Contact (edit these values as you like) -->
+        <div class="meta">
+            <span>📍 Singapore / New York</span>
+            <span class="sep">•</span>
+            <a href="mailto:neaton.ang@columbia.edu">📧 neaton.ang@columbia.edu</a>
+        </div>
         
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/neatonang/" target="_blank">LinkedIn</a>
-            <a href="https://github.com/neatonang" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/neatonang/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/neatonang" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
 
         <a href="./cv.pdf" class="btn">Download CV</a>
@@ -172,7 +202,7 @@
               </a>
             </li>
             <li>
-              Built a 3-stage workflow using BERTopic for large-scale incident ticket clustering, LLM-based topic summarization, and LLM-as-a-judge evaluation at both document and topic levels.
+              Built a 3-stage workflow using BERTopic for large-scale incident ticket clustering, LLM-based topic summarization, and LLM-as-a-judge evaluation at both document and topic levels
             </li>
             <li>
               <a href="https://drive.google.com/file/d/1v8RwhP8PdCLtGakJPyzukrXriyXCIvau/view" target="_blank" rel="noopener noreferrer">Project Report</a>
@@ -187,7 +217,7 @@
               </a>
             </li>
             <li>
-              Designed sentiment-driven and representation-based factor models from macroeconomic news streams with end-to-end pipelines for modeling and backtesting.
+              Designed sentiment-driven and representation-based factor models from macroeconomic news streams with end-to-end pipelines for modeling and backtesting
             </li>
             <li>
               <a href="https://github.com/neatonang/agentic-macro-fincast/blob/main/docs/final_paper_v6.pdf" target="_blank" rel="noopener noreferrer">Project Report</a>
