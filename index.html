@@ -194,8 +194,9 @@
         <strong>Graduate Research Assistant, Clinical NLP @ Columbia University Data Science Institute, NY</strong>
         <ul>
           <li>Advisor: Dr. K. Krstovski</li>
-          <li>Framing detection of metastatic prostate cancer (mPCa) in electronic health records as a classification problem, benchmarking unstructured clinical text against structured lab data</li>
-          <li>Best approach so far (XGBoost on combined notes) achieved 0.89 sensitivity / 0.85 specificity; now extending the pipeline with LLM and embedding-based text representations</li>
+          <li>Framed detection of metastatic prostate cancer in electronic health records from a U.S. federal healthcare agency as a binary classification problem, testing whether unstructured clinical text adds diagnostic signal beyond structured lab data</li>
+          <li>Developed a note + pharmacy terms filtering method that isolates the most diagnostic clinical text, raising sensitivity and specificity by ~12% on average over the baseline</li>
+          <li>Benchmarked classical ML (TF-IDF + XGBoost) against LLM and embedding-based representations. The classical pipeline outperformed them because the signal sits in a few precise clinical terms and the clinical text tends to be very long, while being cheaper and more interpretable for clinical use</li>
           <li>Co-authoring a paper on the automated mPCa detection framework for submission to a conference venue</li>
         </ul>
       </div>
